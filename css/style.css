@@ -4,6 +4,10 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Dokdo', cursive;
+}
 /* End Global  Rules */
 
 /* -- Start Header -- */
@@ -35,7 +39,6 @@
     border: 4px solid #FFF;
     font-size: 24px;
     width: 48%;
-    float: left;
     padding: 20px;
     margin-right: 1%;
     margin-left: 1%;  
@@ -69,6 +72,59 @@
     }
 }
 /* -- End Header -- */
+/*-- Start Features --*/
+.features {
+    padding: 30px 0;
+}
+.features .feat {
+    padding: 0 20px 0 0;
+    margin-bottom: 30px;
+}
+.features .h1 {
+    font-size: 50px;
+    color: #555;
+}
+.features .feat h2 {
+    margin: 10px 0 8px;
+}
+.features .feat p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .features .feat {
+        text-align: center;
+    }
+    .features .feat:nth-of-type(even){
+        background-color: #DDD;
+    }
+}
+
+@media (min-width: 768px) {
+    .features .feat {
+        width: 50%;
+    }
+}
+    
+@media (min-width: 992px) {
+    .features .feat {
+        width: 33.33333%;
+    }
+}
+/*-- End Features --*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -81,42 +137,58 @@
 
 /* min = From --- max = To */
 
-/* Mobile & Tablet Rules */
-@media (max-width: 767px) {
+
+@media (max-width: 767px) { /* Mobile & Tablet Rules */
+    h1 {
+        margin-top: 40px !important;
+    }
     .visible-xs {
-        display: block !important
+        display: block !important;
+    }
+    .hidden-xs {
+        display: none !important;
     }
 }
 
-/* Small Screen Rules */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) { /* Small Screen Rules */
     .container {
         width: 750px;
     }
     .visible-sm {
-        display: block !important
+        display: block !important;
+    }
+    .hidden-sm {
+        display: none !important;
     }
 }
 
-/* Medium Screen Rules */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) { /* Medium Screen Rules */
     .container {
         width: 970px;
     }
     .visible-md {
         display: block !important
     }
+    .hidden-md {
+        display: none !important;
+    }
 }
 
-/* Large Screen Rules */
-@media (min-width: 1200px) {
+@media (min-width: 1200px) { /* Large Screen Rules */
     .container {
         width: 970px;
     }
     .visible-lg {
         display: block !important
     }
+    .hidden-lg {
+        display: none !important;
+    }
 }
+
+
+
+
 
 /* -- Start My Framework -- */
 .text-center {text-align: center}
@@ -133,5 +205,11 @@
 .visible-sm,                 /* Small Screen */
 .visible-md,                 /* Medium Screen */
 .visible-lg {display: none}  /* Large Screen */
+
+.F-L {float: left}
+
+.F-R {float: right}
+
+.h1 {font-size: 2em}
 /* -- End My Framework -- */
 
